@@ -1,0 +1,64 @@
+.render-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.image-wrapper,
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -100;
+}
+
+#scaled-image,
+#scaled-svg {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+}
+
+.render {
+  z-index: -10;
+  filter: brightness(0.85);
+}
+
+.render-svg {
+  z-index: -1;
+
+  &__group {
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__group:hover {
+    opacity: 1;
+  }
+
+  &__group:hover &__number {
+    opacity: 1;
+  }
+
+  &__group--active {
+    opacity: 1;
+  }
+
+  &__mask {
+    fill: $dark;
+    opacity: 0.65;
+    transition: opacity .3s ease;
+  }
+  &__number {
+    fill: $red;
+    transition: opacity .3s ease;
+  }
+}

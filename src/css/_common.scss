@@ -1,0 +1,47 @@
+@import '_variable';
+
+html {
+  box-sizing: border-box;
+  font-size: $mainFontSize;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+li,
+ul {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: $dinpro;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2.3rem;
+}

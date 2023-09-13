@@ -1,0 +1,147 @@
+
+.header {
+  position: relative;
+  background-color: $white;
+  text-transform: uppercase;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    color: $secondary;
+    font-weight: bold;
+  }
+
+  &__logo {
+    margin: 0.8rem 3.7rem;
+    height: 6.6rem;
+    width: 21.9rem;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  font-size: $text-small;
+  cursor: pointer;
+  color: $secondary;
+  transition: color .3s ease;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:hover &__burger rect:nth-child(2) {
+      transform: translateX(-0.4rem);
+  }
+  &:hover &__burger rect:nth-child(3) {
+    transform: translateX(-0.8rem);
+  }
+
+  &__burger {
+    margin-bottom: 0.8rem;
+  }
+
+  &__burger rect {
+    transition: transform .3s ease;
+    fill: currentColor;
+  }
+}
+
+.nav {
+  font-size: $text;
+
+  &__item {
+    position: relative;
+    transition: color .3s ease;
+
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 0.1rem;
+      background-color: $primary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:focus {
+      color: $primary;
+    }
+
+    &:active {
+      color: $secondary;
+      outline: none;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+
+    &:focus:after {
+      width: 0;
+    }
+
+    &--active {
+      padding-bottom: 1.4rem;
+      background: url('../images/select.svg') center bottom / 1.4rem no-repeat;
+      font-weight: 400;
+      pointer-events: none;
+    }
+  }
+
+  &__separator {
+    margin: 0 1rem;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+
+  &__call {
+    font-size: 1.6rem;
+    color: $dark;
+  }
+
+  &__order-call {
+    font-size: $text-small;
+    color: $primary;
+    border-bottom: 0.1rem solid;
+    border-color: $primary;
+    transition: border-color .3s ease;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      content: "";
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:active {
+      color: $secondary;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.options {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 3.3rem;
+  left: 6rem;
+  cursor: pointer;
+
+  &__field {
+    width: 4.6rem;
+    height: 4.6rem;
+    transform: rotate(-45deg);
+    background: rgb(163,130,41);
+    background: linear-gradient(45deg, rgba(163,130,41,1) 0%, rgba(163,130,41,1) 48%, rgba(179,159,89,1) 52%, rgba(179,159,89,1) 100%);
+  }
+
+  &__animated {
+    overflow: hidden;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: .8rem;
+  }
+
+  &__title {
+    width: 11rem;
+    margin-left: 1.2rem;
+    font-weight: bold;
+    font-size: $text;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &:hover .stripe--1 {
+    animation: anim1  linear infinite 2s;
+  }
+
+  &:hover .stripe--2 {
+    animation: anim2  linear infinite 2s;
+  }
+
+  &:hover .stripe--3 {
+    animation: anim3  linear infinite 2s;
+  }
+}
+
+@keyframes anim1 {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(.7rem); }
+  65% { transform: translateX(-1.5rem); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes anim2 {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(1.1rem); }
+  75% { transform: translateX(-1.1rem); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes anim3 {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(1.5rem); }
+  85% { transform: translateX(-.7rem); }
+  100% { transform: translateX(0); }
+}
+
+.stripe {
+  position: absolute;
+  &--1 {
+    left: -3.4rem;
+  }
+
+  &--2 {
+    top: 1rem;
+    left: -3.8rem;
+    }
+
+  &--3 {
+    top: 2rem;
+    left: -4.2rem;
+  }
+}

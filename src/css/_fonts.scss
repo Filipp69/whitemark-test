@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "CharterC";
+  src: local("CharterC"),
+  url("../fonts/CharterC.woff2") format("woff2"),
+  url("../fonts/CharterC.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: local("DINProRegular"),
+            url("../fonts/DINProRegular.woff2") format("woff2"),
+            url("../fonts/DINProRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: local("DINProMedium"),
+            url("../fonts/DINProMedium.woff2") format("woff2"),
+            url("../fonts/DINProMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: local("DINProBold"),
+            url("../fonts/DINProBold.woff2") format("woff2"),
+            url("../fonts/DINProBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
